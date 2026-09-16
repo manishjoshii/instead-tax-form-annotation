@@ -1,0 +1,240 @@
+{
+  "specVersion": "1.0",
+  "form": {
+    "formId": "f1040",
+    "revision": "2025",
+    "template": "forms/f1040.pdf",
+    "dataScope": { "path": "$.users[{userId}].1040_form", "parameters": ["userId"] },
+    "flatten": false,
+    "coordinateSystem": {
+      "unit": "pt",
+      "origin": "bottom-left",
+      "pageNumbering": "one-based"
+    }
+  },
+  "annotations": [
+    {
+      "id": "1040.taxpayer.firstName",
+      "label": "Form 1040 first name",
+      "source": {
+        "path": "$.taxpayer.name.first"
+      },
+      "target": {
+        "page": 1,
+        "fieldName": "topmostSubform[0].Page1[0].f1_14[0]"
+      },
+      "render": {
+        "type": "text"
+      },
+      "required": true
+    },
+    {
+      "id": "1040.taxpayer.lastName",
+      "label": "Form 1040 last name",
+      "source": {
+        "path": "$.taxpayer.name.last"
+      },
+      "target": {
+        "page": 1,
+        "fieldName": "topmostSubform[0].Page1[0].f1_15[0]"
+      },
+      "render": {
+        "type": "text"
+      },
+      "required": true
+    },
+    {
+      "id": "1040.taxpayer.ssn",
+      "label": "Form 1040 SSN",
+      "source": {
+        "path": "$.taxpayer.ssn"
+      },
+      "target": {
+        "page": 1,
+        "fieldName": "topmostSubform[0].Page1[0].f1_16[0]"
+      },
+      "render": {
+        "type": "text"
+      },
+      "required": true
+    },
+    {
+      "id": "1040.taxpayer.street",
+      "label": "Form 1040 street address",
+      "source": {
+        "path": "$.taxpayer.address.street"
+      },
+      "target": {
+        "page": 1,
+        "fieldName": "topmostSubform[0].Page1[0].Address_ReadOrder[0].f1_20[0]"
+      },
+      "render": {
+        "type": "text"
+      },
+      "required": true
+    },
+    {
+      "id": "1040.taxpayer.city",
+      "label": "Form 1040 city",
+      "source": {
+        "path": "$.taxpayer.address.city"
+      },
+      "target": {
+        "page": 1,
+        "fieldName": "topmostSubform[0].Page1[0].Address_ReadOrder[0].f1_22[0]"
+      },
+      "render": {
+        "type": "text"
+      },
+      "required": true
+    },
+    {
+      "id": "1040.taxpayer.state",
+      "label": "Form 1040 state",
+      "source": {
+        "path": "$.taxpayer.address.state"
+      },
+      "target": {
+        "page": 1,
+        "fieldName": "topmostSubform[0].Page1[0].Address_ReadOrder[0].f1_23[0]"
+      },
+      "render": {
+        "type": "text"
+      },
+      "required": true
+    },
+    {
+      "id": "1040.taxpayer.zip",
+      "label": "Form 1040 ZIP code",
+      "source": {
+        "path": "$.taxpayer.address.zip"
+      },
+      "target": {
+        "page": 1,
+        "fieldName": "topmostSubform[0].Page1[0].Address_ReadOrder[0].f1_24[0]"
+      },
+      "render": {
+        "type": "text"
+      },
+      "required": true
+    },
+    {
+      "id": "1040.filingStatus.single",
+      "label": "Form 1040 Single checkbox",
+      "source": {
+        "path": "$.taxpayer.filingStatus"
+      },
+      "target": {
+        "page": 1,
+        "fieldName": "topmostSubform[0].Page1[0].Checkbox_ReadOrder[0].c1_8[0]"
+      },
+      "render": {
+        "type": "checkbox",
+        "checkedWhen": "single"
+      },
+      "required": true
+    },
+    {
+      "id": "1040.line1a.wages",
+      "label": "Line 1a from W-2 box 1",
+      "source": {
+        "path": "$.w2local[0].box1"
+      },
+      "target": {
+        "page": 1,
+        "fieldName": "topmostSubform[0].Page1[0].f1_47[0]"
+      },
+      "render": {
+        "type": "number",
+        "thousandsSeparator": true,
+        "decimalPlaces": 0
+      },
+      "required": true
+    },
+    {
+      "id": "1040.line2b.taxableInterest",
+      "label": "Line 2b from Schedule B line 4",
+      "source": {
+        "path": "$.scheduleB.partI.line4TaxableInterest"
+      },
+      "target": {
+        "page": 1,
+        "fieldName": "topmostSubform[0].Page1[0].f1_59[0]"
+      },
+      "render": {
+        "type": "number",
+        "thousandsSeparator": true,
+        "decimalPlaces": 0
+      },
+      "required": true
+    },
+    {
+      "id": "1040.line8.schedule1Income",
+      "label": "Line 8 from Schedule 1 line 10",
+      "source": {
+        "path": "$.schedule1.partI.line10AdditionalIncome"
+      },
+      "target": {
+        "page": 1,
+        "fieldName": "topmostSubform[0].Page1[0].f1_71[0]"
+      },
+      "render": {
+        "type": "number",
+        "thousandsSeparator": true,
+        "decimalPlaces": 0
+      },
+      "required": true
+    },
+    {
+      "id": "1040.line9.totalIncome",
+      "label": "Line 9 computed total income",
+      "source": {
+        "path": "$.computed.form1040.line9TotalIncome"
+      },
+      "target": {
+        "page": 1,
+        "fieldName": "topmostSubform[0].Page1[0].f1_72[0]"
+      },
+      "render": {
+        "type": "number",
+        "thousandsSeparator": true,
+        "decimalPlaces": 0
+      },
+      "required": true
+    },
+    {
+      "id": "1040.line10.adjustments",
+      "label": "Line 10 from Schedule 1 line 26",
+      "source": {
+        "path": "$.schedule1.partII.line26AdjustmentsToIncome"
+      },
+      "target": {
+        "page": 1,
+        "fieldName": "topmostSubform[0].Page1[0].f1_73[0]"
+      },
+      "render": {
+        "type": "number",
+        "thousandsSeparator": true,
+        "decimalPlaces": 0
+      },
+      "required": true
+    },
+    {
+      "id": "1040.line11a.agi",
+      "label": "Line 11a computed AGI",
+      "source": {
+        "path": "$.computed.form1040.line11aAdjustedGrossIncome"
+      },
+      "target": {
+        "page": 1,
+        "fieldName": "topmostSubform[0].Page1[0].f1_74[0]"
+      },
+      "render": {
+        "type": "number",
+        "thousandsSeparator": true,
+        "decimalPlaces": 0
+      },
+      "required": true
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/instead-tax-annotation.schema.json",
+  "title": "Tax Form Annotation Specification",
+  "type": "object",
+  "required": [
+    "specVersion",
+    "form",
+    "annotations"
+  ],
+  "properties": {
+    "specVersion": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "form": {
+      "type": "object",
+      "required": [
+        "formId",
+        "template",
+        "coordinateSystem"
+      ],
+      "properties": {
+        "formId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "string"
+        },
+        "template": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dataScope": {
+          "type": "object",
+          "required": ["path"],
+          "properties": {
+            "path": { "type": "string", "pattern": "^\\$" },
+            "parameters": { "type": "array", "items": { "type": "string" } }
+          },
+          "additionalProperties": false
+        },
+        "flatten": {
+          "type": "boolean",
+          "default": false
+        },
+        "coordinateSystem": {
+          "type": "object",
+          "required": [
+            "unit",
+            "origin",
+            "pageNumbering"
+          ],
+          "properties": {
+            "unit": {
+              "const": "pt"
+            },
+            "origin": {
+              "const": "bottom-left"
+            },
+            "pageNumbering": {
+              "const": "one-based"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "annotations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/annotation"
+      },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "annotation": {
+      "type": "object",
+      "required": [
+        "id",
+        "source",
+        "target",
+        "render"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string"
+        },
+        "required": {
+          "type": "boolean",
+          "default": false
+        },
+        "source": {
+          "type": "object",
+          "required": [
+            "path"
+          ],
+          "properties": {
+            "path": {
+              "type": "string",
+              "pattern": "^\\$"
+            }
+          },
+          "additionalProperties": false
+        },
+        "target": {
+          "type": "object",
+          "required": [
+            "page"
+          ],
+          "properties": {
+            "page": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "fieldName": {
+              "type": "string",
+              "minLength": 1
+            },
+            "box": {
+              "type": "object",
+              "required": [
+                "x",
+                "y",
+                "width",
+                "height"
+              ],
+              "properties": {
+                "x": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "y": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "width": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "height": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false,
+          "oneOf": [
+            {
+              "required": [
+                "fieldName"
+              ]
+            },
+            {
+              "required": [
+                "box"
+              ]
+            }
+          ]
+        },
+        "render": {
+          "type": "object",
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "type": {
+              "enum": [
+                "text",
+                "number",
+                "currency",
+                "date",
+                "checkbox"
+              ]
+            },
+            "dateFormat": {
+              "enum": [
+                "MM/dd/yyyy",
+                "yyyy-MM-dd"
+              ]
+            },
+            "decimalPlaces": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 6
+            },
+            "thousandsSeparator": {
+              "type": "boolean"
+            },
+            "currencySymbol": {
+              "type": "string",
+              "maxLength": 3
+            },
+            "negativeStyle": {
+              "enum": [
+                "minus",
+                "parentheses"
+              ]
+            },
+            "checkedWhen": {},
+            "fontSize": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "font": {
+              "enum": [
+                "Helvetica",
+                "Helvetica-Bold",
+                "Courier"
+              ]
+            },
+            "horizontalAlign": {
+              "enum": [
+                "left",
+                "center",
+                "right"
+              ]
+            },
+            "verticalAlign": {
+              "enum": [
+                "top",
+                "middle",
+                "bottom"
+              ]
+            },
+            "overflow": {
+              "enum": [
+                "error",
+                "clip",
+                "shrink-to-fit"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
