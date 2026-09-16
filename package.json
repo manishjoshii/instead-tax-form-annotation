@@ -1,0 +1,14 @@
+{
+  "name": "instead-tax-annotation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A small, generic annotation specification and PDF renderer for tax forms.",
+  "type": "module",
+  "scripts": {
+    "render": "node src/cli.js"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "pdf-lib": "^1.17.1"
+  }
+}

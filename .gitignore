@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Generated artifacts
+output/*.pdf
+output/*.png
+output/*.jpg
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local environment and editor files
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+Read.md
