@@ -21,7 +21,12 @@
       },
       "target": {
         "page": 1,
-        "fieldName": "topmostSubform[0].Page1[0].f1_14[0]"
+        "box": {
+          "x": 36,
+          "y": 684,
+          "width": 215.25,
+          "height": 14.001
+        }
       },
       "render": {
         "type": "text"
