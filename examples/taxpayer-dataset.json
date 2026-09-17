@@ -3,56 +3,394 @@
     "user1": {
       "1040_form": {
         "taxYear": 2025,
-        "taxpayer": { "name": { "first": "John", "middleInitial": "Q", "last": "Doe" }, "ssn": "123456789", "address": { "street": "123 Main Street", "city": "Austin", "state": "TX", "zip": "78701" }, "filingStatus": "single" },
-        "w2local": [{ "employer": { "name": "Acme Software LLC", "ein": "12-3456789" }, "box1": 85000, "box2": 12000, "box3": 85000, "box4": 5270, "box5": 85000, "box6": 1232.5, "box12": { "codes": [{ "code": "DD", "amount": 7200 }] }, "box13": { "retirementPlan": false, "thirdPartySickPay": false, "statutoryEmployee": false }, "box14": [] }],
-        "schedule1": { "partI": { "line3BusinessIncomeOrLoss": 18000, "line8OtherIncome": 0, "line10AdditionalIncome": 18000 }, "partII": { "line15DeductiblePartOfSelfEmploymentTax": 1273, "line26AdjustmentsToIncome": 1273 } },
-        "scheduleB": { "partI": { "interestItems": [{ "payer": "First Bank", "amount": 1200 }], "line2TotalInterest": 1200, "line3ForeignAccount": false, "line4TaxableInterest": 1200 }, "partII": { "dividendItems": [], "line6TotalOrdinaryDividends": 0, "line7ForeignAccount": false, "line8ForeignTrust": false } },
-        "scheduleC": { "business": { "name": "Doe Consulting", "principalBusinessCode": "541611", "accountingMethod": "cash", "materialParticipation": true }, "partI": { "line1GrossReceipts": 60000, "line7GrossIncome": 60000, "line28TotalExpenses": 42000, "line31NetProfit": 18000 }, "partII": { "line8Advertising": 1000, "line13Depreciation": 2000, "line18OfficeExpense": 1500, "line24bMeals": 500, "line25Utilities": 1000, "line26Wages": 0, "line27aOtherExpenses": 36000 } },
-        "computed": { "form1040": { "line1zWages": 85000, "line9TotalIncome": 104200, "line11aAdjustedGrossIncome": 102927 } }
+        "taxpayer": {
+          "name": {
+            "first": "John",
+            "middleInitial": "Q",
+            "last": "Doe"
+          },
+          "ssn": "123456789",
+          "address": {
+            "street": "123 Main Street",
+            "city": "Austin",
+            "state": "TX",
+            "zip": "78701"
+          },
+          "filingStatus": "single"
+        },
+        "w2local": [
+          {
+            "employer": {
+              "name": "Acme Software LLC",
+              "ein": "12-3456789"
+            },
+            "box1": 85000,
+            "box2": 12000,
+            "box3": 85000,
+            "box4": 5270,
+            "box5": 85000,
+            "box6": 1232.5,
+            "box12": {
+              "codes": [
+                {
+                  "code": "DD",
+                  "amount": 7200
+                }
+              ]
+            },
+            "box13": {
+              "retirementPlan": false,
+              "thirdPartySickPay": false,
+              "statutoryEmployee": false
+            },
+            "box14": []
+          }
+        ],
+        "schedule1": {
+          "partI": {
+            "line3BusinessIncomeOrLoss": 18000,
+            "line8OtherIncome": 0,
+            "line10AdditionalIncome": 18000
+          },
+          "partII": {
+            "line15DeductiblePartOfSelfEmploymentTax": 1273,
+            "line26AdjustmentsToIncome": 1273
+          }
+        },
+        "scheduleB": {
+          "partI": {
+            "interestItems": [
+              {
+                "payer": "First Bank",
+                "amount": 1200
+              }
+            ],
+            "line2TotalInterest": 1200,
+            "line3ForeignAccount": false,
+            "line4TaxableInterest": 1200
+          },
+          "partII": {
+            "dividendItems": [],
+            "line6TotalOrdinaryDividends": 0,
+            "line7ForeignAccount": false,
+            "line8ForeignTrust": false
+          }
+        },
+        "scheduleC": {
+          "business": {
+            "name": "Doe Consulting",
+            "principalBusinessCode": "541611",
+            "accountingMethod": "cash",
+            "materialParticipation": true
+          },
+          "partI": {
+            "line1GrossReceipts": 60000,
+            "line7GrossIncome": 60000,
+            "line28TotalExpenses": 42000,
+            "line31NetProfit": 18000
+          },
+          "partII": {
+            "line8Advertising": 1000,
+            "line13Depreciation": 2000,
+            "line18OfficeExpense": 1500,
+            "line24bMeals": 500,
+            "line25Utilities": 1000,
+            "line26Wages": 0,
+            "line27aOtherExpenses": 36000
+          }
+        },
+        "computed": {
+          "form1040": {
+            "line1zWages": 85000,
+            "line9TotalIncome": 104200,
+            "line11aAdjustedGrossIncome": 102927
+          }
+        }
       }
     },
     "user2": {
       "1040_form": {
         "taxYear": 2025,
-        "taxpayer": { "name": { "first": "Jane", "middleInitial": "R", "last": "Smith" }, "ssn": "987654321", "address": { "street": "456 Oak Avenue", "city": "Denver", "state": "CO", "zip": "80202" }, "filingStatus": "single" },
-        "w2local": [{ "employer": { "name": "Example Corp", "ein": "98-7654321" }, "box1": 72000, "box2": 8500, "box3": 72000, "box4": 4464, "box5": 72000, "box6": 1044, "box12": { "codes": [] }, "box13": { "retirementPlan": true, "thirdPartySickPay": false, "statutoryEmployee": false }, "box14": [] }],
-        "schedule1": { "partI": { "line3BusinessIncomeOrLoss": 0, "line8OtherIncome": 0, "line10AdditionalIncome": 0 }, "partII": { "line15DeductiblePartOfSelfEmploymentTax": 0, "line26AdjustmentsToIncome": 0 } },
-        "scheduleB": { "partI": { "interestItems": [], "line2TotalInterest": 0, "line3ForeignAccount": false, "line4TaxableInterest": 0 }, "partII": { "dividendItems": [], "line6TotalOrdinaryDividends": 0, "line7ForeignAccount": false, "line8ForeignTrust": false } },
-        "scheduleC": { "business": null, "partI": { "line1GrossReceipts": 0, "line7GrossIncome": 0, "line28TotalExpenses": 0, "line31NetProfit": 0 }, "partII": {} },
-        "computed": { "form1040": { "line1zWages": 72000, "line9TotalIncome": 72000, "line11aAdjustedGrossIncome": 72000 } }
+        "taxpayer": {
+          "name": {
+            "first": "Jane",
+            "middleInitial": "R",
+            "last": "Smith"
+          },
+          "ssn": "987654321",
+          "address": {
+            "street": "456 Oak Avenue",
+            "city": "Denver",
+            "state": "CO",
+            "zip": "80202"
+          },
+          "filingStatus": "single"
+        },
+        "w2local": [
+          {
+            "employer": {
+              "name": "Example Corp",
+              "ein": "98-7654321"
+            },
+            "box1": 72000,
+            "box2": 8500,
+            "box3": 72000,
+            "box4": 4464,
+            "box5": 72000,
+            "box6": 1044,
+            "box12": {
+              "codes": []
+            },
+            "box13": {
+              "retirementPlan": true,
+              "thirdPartySickPay": false,
+              "statutoryEmployee": false
+            },
+            "box14": []
+          }
+        ],
+        "schedule1": {
+          "partI": {
+            "line3BusinessIncomeOrLoss": 0,
+            "line8OtherIncome": 0,
+            "line10AdditionalIncome": 0
+          },
+          "partII": {
+            "line15DeductiblePartOfSelfEmploymentTax": 0,
+            "line26AdjustmentsToIncome": 0
+          }
+        },
+        "scheduleB": {
+          "partI": {
+            "interestItems": [],
+            "line2TotalInterest": 0,
+            "line3ForeignAccount": false,
+            "line4TaxableInterest": 0
+          },
+          "partII": {
+            "dividendItems": [],
+            "line6TotalOrdinaryDividends": 0,
+            "line7ForeignAccount": false,
+            "line8ForeignTrust": false
+          }
+        },
+        "scheduleC": {
+          "business": null,
+          "partI": {
+            "line1GrossReceipts": 0,
+            "line7GrossIncome": 0,
+            "line28TotalExpenses": 0,
+            "line31NetProfit": 0
+          },
+          "partII": {}
+        },
+        "computed": {
+          "form1040": {
+            "line1zWages": 72000,
+            "line9TotalIncome": 72000,
+            "line11aAdjustedGrossIncome": 72000
+          }
+        }
       }
     },
     "user3": {
       "1040_form": {
         "taxYear": 2025,
-        "taxpayer": { "name": { "first": "Maria", "middleInitial": "L", "last": "Garcia" }, "ssn": "246813579", "address": { "street": "789 Pine Road", "city": "Raleigh", "state": "NC", "zip": "27601" }, "filingStatus": "single" },
+        "taxpayer": {
+          "name": {
+            "first": "Maria",
+            "middleInitial": "L",
+            "last": "Garcia"
+          },
+          "ssn": "246813579",
+          "address": {
+            "street": "789 Pine Road",
+            "city": "Raleigh",
+            "state": "NC",
+            "zip": "27601"
+          },
+          "filingStatus": "single"
+        },
         "w2local": [
-          { "employer": { "name": "Northstar Health Inc", "ein": "11-2233445" }, "box1": 68000, "box2": 7200, "box3": 68000, "box4": 4216, "box5": 68000, "box6": 986, "box12": { "codes": [{ "code": "DD", "amount": 5400 }] }, "box13": { "retirementPlan": true, "thirdPartySickPay": false, "statutoryEmployee": false }, "box14": [{ "label": "State disability", "amount": 180 }] },
-          { "employer": { "name": "Triangle Medical Group", "ein": "55-6677889" }, "box1": 12000, "box2": 1200, "box3": 12000, "box4": 744, "box5": 12000, "box6": 174, "box12": { "codes": [] }, "box13": { "retirementPlan": false, "thirdPartySickPay": false, "statutoryEmployee": false }, "box14": [] }
+          {
+            "employer": {
+              "name": "Northstar Health Inc",
+              "ein": "11-2233445"
+            },
+            "box1": 68000,
+            "box2": 7200,
+            "box3": 68000,
+            "box4": 4216,
+            "box5": 68000,
+            "box6": 986,
+            "box12": {
+              "codes": [
+                {
+                  "code": "DD",
+                  "amount": 5400
+                }
+              ]
+            },
+            "box13": {
+              "retirementPlan": true,
+              "thirdPartySickPay": false,
+              "statutoryEmployee": false
+            },
+            "box14": [
+              {
+                "label": "State disability",
+                "amount": 180
+              }
+            ]
+          },
+          {
+            "employer": {
+              "name": "Triangle Medical Group",
+              "ein": "55-6677889"
+            },
+            "box1": 12000,
+            "box2": 1200,
+            "box3": 12000,
+            "box4": 744,
+            "box5": 12000,
+            "box6": 174,
+            "box12": {
+              "codes": []
+            },
+            "box13": {
+              "retirementPlan": false,
+              "thirdPartySickPay": false,
+              "statutoryEmployee": false
+            },
+            "box14": []
+          }
         ],
         "schedule1": {
-          "partI": { "line3BusinessIncomeOrLoss": -7000, "line5RentalRealEstateRoyalties": -800, "line6FarmIncomeOrLoss": 3550, "line8OtherIncome": 0, "line10AdditionalIncome": -4250 },
-          "partII": { "line15DeductiblePartOfSelfEmploymentTax": 0, "line21StudentLoanInterestDeduction": 1200, "line26AdjustmentsToIncome": 1200 }
+          "partI": {
+            "line3BusinessIncomeOrLoss": -7000,
+            "line5RentalRealEstateRoyalties": -800,
+            "line6FarmIncomeOrLoss": 3550,
+            "line8OtherIncome": 0,
+            "line10AdditionalIncome": -4250
+          },
+          "partII": {
+            "line15DeductiblePartOfSelfEmploymentTax": 0,
+            "line21StudentLoanInterestDeduction": 1200,
+            "line26AdjustmentsToIncome": 1200
+          }
         },
         "scheduleB": {
-          "partI": { "interestItems": [{ "payer": "Coastal Credit Union", "amount": 850 }, { "payer": "NC State Treasury", "amount": 125 }], "line2TotalInterest": 975, "line3ForeignAccount": false, "line4TaxableInterest": 975 },
-          "partII": { "dividendItems": [{ "payer": "Broad Market Index Fund", "amount": 640 }], "line6TotalOrdinaryDividends": 640, "line7ForeignAccount": false, "line8ForeignTrust": false }
+          "partI": {
+            "interestItems": [
+              {
+                "payer": "Coastal Credit Union",
+                "amount": 850
+              },
+              {
+                "payer": "NC State Treasury",
+                "amount": 125
+              }
+            ],
+            "line2TotalInterest": 975,
+            "line3ForeignAccount": false,
+            "line4TaxableInterest": 975
+          },
+          "partII": {
+            "dividendItems": [
+              {
+                "payer": "Broad Market Index Fund",
+                "amount": 640
+              }
+            ],
+            "line6TotalOrdinaryDividends": 640,
+            "line7ForeignAccount": false,
+            "line8ForeignTrust": false
+          }
         },
         "scheduleC": {
-          "business": { "name": "Garcia Health Coaching", "principalBusinessCode": "621399", "accountingMethod": "cash", "materialParticipation": true },
-          "partI": { "line1GrossReceipts": 24000, "line7GrossIncome": 24000, "line28TotalExpenses": 31000, "line31NetProfit": -7000 },
-          "partII": { "line8Advertising": 1200, "line13Depreciation": 800, "line18OfficeExpense": 1800, "line24bMeals": 600, "line25Utilities": 900, "line26Wages": 0, "line27aOtherExpenses": 25700 }
+          "business": {
+            "name": "Garcia Health Coaching",
+            "principalBusinessCode": "621399",
+            "accountingMethod": "cash",
+            "materialParticipation": true
+          },
+          "partI": {
+            "line1GrossReceipts": 24000,
+            "line7GrossIncome": 24000,
+            "line28TotalExpenses": 31000,
+            "line31NetProfit": -7000
+          },
+          "partII": {
+            "line8Advertising": 1200,
+            "line13Depreciation": 800,
+            "line18OfficeExpense": 1800,
+            "line24bMeals": 600,
+            "line25Utilities": 900,
+            "line26Wages": 0,
+            "line27aOtherExpenses": 25700
+          }
         },
         "scheduleE": {
-          "rentalProperties": [{ "address": "101 Lakeview Drive, Raleigh, NC", "propertyType": "single-family", "fairRentalDays": 365, "personalUseDays": 0, "rentsReceived": 18000, "expenses": { "advertising": 300, "autoAndTravel": 500, "insurance": 900, "interest": 2400, "repairs": 1200, "taxes": 1800, "utilities": 900, "depreciation": 10200, "other": 600 }, "netRentalIncomeOrLoss": -800 }],
+          "rentalProperties": [
+            {
+              "address": "101 Lakeview Drive, Raleigh, NC",
+              "propertyType": "single-family",
+              "fairRentalDays": 365,
+              "personalUseDays": 0,
+              "rentsReceived": 18000,
+              "expenses": {
+                "advertising": 300,
+                "autoAndTravel": 500,
+                "insurance": 900,
+                "interest": 2400,
+                "repairs": 1200,
+                "taxes": 1800,
+                "utilities": 900,
+                "depreciation": 10200,
+                "other": 600
+              },
+              "netRentalIncomeOrLoss": -800
+            }
+          ],
           "totalSupplementalIncomeOrLoss": -800
         },
         "scheduleF": {
-          "farm": { "principalProduct": "cut flowers", "accountingMethod": "cash", "employerId": "33-4455667" },
-          "partI": { "line1aSalesOfLivestockProduce": 15000, "line1bCooperativeDistributions": 0, "line2AgriculturalProgramPayments": 500, "line8OtherIncome": 0, "line9GrossIncome": 15500 },
-          "partII": { "line10CarAndTruck": 1100, "line12Chemicals": 450, "line13Conservation": 300, "line14Depreciation": 2600, "line18Feed": 1800, "line21Fertilizer": 700, "line24OtherExpenses": 5000, "line32TotalExpenses": 11950, "line34NetFarmProfitOrLoss": 3550 }
+          "farm": {
+            "principalProduct": "cut flowers",
+            "accountingMethod": "cash",
+            "employerId": "33-4455667"
+          },
+          "partI": {
+            "line1aSalesOfLivestockProduce": 15000,
+            "line1bCooperativeDistributions": 0,
+            "line2AgriculturalProgramPayments": 500,
+            "line8OtherIncome": 0,
+            "line9GrossIncome": 15500
+          },
+          "partII": {
+            "line10CarAndTruck": 1100,
+            "line12Chemicals": 450,
+            "line13Conservation": 300,
+            "line14Depreciation": 2600,
+            "line18Feed": 1800,
+            "line21Fertilizer": 700,
+            "line24OtherExpenses": 5000,
+            "line32TotalExpenses": 11950,
+            "line34NetFarmProfitOrLoss": 3550
+          }
         },
-        "computed": { "form1040": { "line1zWages": 80000, "line2bTaxableInterest": 975, "line3bOrdinaryDividends": 640, "line7CapitalGainOrLoss": 0, "line8AdditionalIncome": -4250, "line9TotalIncome": 77365, "line10Adjustments": 1200, "line11aAdjustedGrossIncome": 76165 } }
+        "computed": {
+          "form1040": {
+            "line1zWages": 80000,
+            "line2bTaxableInterest": 975,
+            "line3bOrdinaryDividends": 640,
+            "line7CapitalGainOrLoss": 0,
+            "line8AdditionalIncome": -4250,
+            "line9TotalIncome": 77365,
+            "line10Adjustments": 1200,
+            "line11aAdjustedGrossIncome": 76165
+          }
+        }
       }
     }
   }
